@@ -1,0 +1,452 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #111;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.star
+{
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    animation: animate 5s linear infinite;
+}
+
+.star::before
+{
+    content: '\f005';
+    font-family: fontAwesome;
+    text-shadow: 0 0 5px #fff,
+    0 0 20px #fff,
+    0 0 50px #fff;
+}
+
+@keyframes animate
+{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* navbar session */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    min-height: 100vh;
+    background: #0c192c;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+body:has(.box[data-color="clr1"]:hover)
+{
+    background: #162527;
+}
+body:has(.box[data-color="clr2"]:hover)
+{
+    background: #202011;
+}
+body:has(.box[data-color="clr3"]:hover)
+{
+    background: #5b4510;
+}
+body:has(.box[data-color="clr4"]:hover)
+{
+    background: #611417;
+}
+.bg
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 80px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+header .logo{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+header .logo span{
+    color: #ff2d75;
+}
+header nav{
+    display: flex;
+    gap: 25px;
+}
+header nav a{
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+header nav a.active,
+header nav a:hover
+{
+    color: #4fc3dc;
+}
+
+/* guaaaa */
+
+
+
+.content
+{
+    position: absolute;
+    display: flex;
+    margin-top:53%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+p
+{
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+    padding-top: 10px;
+}
+
+form
+{
+    z-index: 10000;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center ;
+    margin-top: 560px;
+    
+}
+form button{
+    margin: 5px;
+}
+.search
+{
+    position: absolute;
+    margin-top: 30%;
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.search:hover input
+{
+    width: 400px;
+}
+.search input
+{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: .8s;
+    background: transparent
+}
+.search a .fas
+{
+    color: #1daf;
+    font-size: 18px;
+}
+.stylish-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 37%;
+    position: absolute;
+}
+
+.stylish-button:hover {
+    background-color: #2980b9;
+}
+
+.stylish-button:active {
+    transform: scale(0.95);
+}
+
+/* top rank css */
+
+.container
+{
+    text-decoration: none;
+    margin-top: 71%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.container .box
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.container .box .imgBx
+{
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 4px solid rgba(0, 0, 0, 0.2);
+}
+.container .box .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.container .box:hover .imgBx img
+{
+    opacity: 0.5;
+}
+.container .box .glass
+{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#fff2,transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    scale: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.container .box .glass::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+}
+.container .box:hover
+{
+    transform: rotate(-15deg);
+}
+.container .box:hover .glass
+{
+    opacity: 1;
+    scale: 1;
+    transform: rotate(20deg);
+}
+.container .box .glass h3
+{
+    font-size: 1.25em;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 0.8em;
+}
+.container .box .glass h3 span
+{
+    font-weight: 400;
+    font-size: 0.5em;
+}
+.container .box ul
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.container .box ul a 
+{
+    color: #fff;
+    font-size: 1.25em;
+    scale: 0;
+    transition: 0.25s;
+    transition-delay: scale calc(0.2s * var(--a));
+}
+.container .box:hover ul a 
+{
+    scale: 1;
+}
+.container .box ul a:hover
+{
+    color: #ff2d75;
+}
+
+.other{
+    display: flex;
+    position: absolute;
+    margin-top: 120%;
+}
+
+.see-more-button {
+    position: absolute;
+    margin-top: 140%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .see-more-button:hover {
+    background-color: #2980b9;
+  }
+h2
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100%;
+    color: #ff2d75;
+    font-size: 24px;
+    animation: colorChange 3s infinite;
+}
+
+
+  h6{
+    position: absolute;
+    color: #fff;
+    font-size: 8em;
+    font-weight: 700;
+    padding: 0 100px;
+}
+h6 span{
+    position: relative;
+    color: rgba(255, 255, 255, 0.1);
+    animation: displayText 9s infinite;
+    animation-delay: calc(-3s * var(--z));
+}
+@keyframes displayText {
+    0%{
+        display: inline-block;
+    }
+    33.33%,100% {
+        display: none;
+    }
+}
+h6 span::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #01fe87;
+    border-right: 4px solid #01fe87;
+    filter: drop-shadow(0 0 5px #01fe87) drop-shadow(0 0 25px #01fe87);
+    animation: animaterr 3s linear infinite;
+}
+@keyframes animaterr {
+    0%,30%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100;
+    }
+}
+h1{
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    margin-top: 55%;
+    font-size: 3em;
+    letter-spacing: 5px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 0.70em;
+    outline: none;
+    animation: animatek 5s linear infinite;
+    
+}
+@keyframes animatek
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color: #fff;
+        text-shadow: 0 0 10px #01fe87,
+        0 0 20px #01fe87,
+        0 0 40px #01fe87,
+        0 0 80px #01fe87,
+        0 0 100px #01fe87;
+    }
+}

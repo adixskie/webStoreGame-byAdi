@@ -1,0 +1,161 @@
+*{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+
+.container{
+    display: flex;
+}
+.container .home-page p{
+    margin-top: 160px;
+    margin-left: 20px;
+}
+.container .home-page p i{
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s;
+}
+a:hover{
+    cursor: pointer;
+}
+.container .home-kategori{
+    margin-top: 169px;
+    margin-left: 14px;
+}
+.container .home-kategori p {
+    font-size: 16px;
+}
+.table{
+    width: 90%;
+    
+}
+h3{
+    margin-left: 85%;
+    color: #00ccff;
+}
+form{
+    margin-left: 80%;
+    margin-top: 15px;
+}
+label{
+    margin-left: 85%;
+    margin-top: 5px;
+}
+.input-boxs input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    transition: .5s;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    padding-right: 25px;
+}
+.input-boxs input:focus,
+.input-boxs input:valid{
+    border-bottom-color: #0ef;
+}
+.input-boxs label{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-5px);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-boxs input:focus~label,
+.input-boxs input:valid~label{
+    right: -5px;
+    color: #0ef;
+}
+.input-boxs i{
+    position: absolute;
+    top: 40%;
+    right: 0;
+    transform: translateY(-5px);
+    font-size: 18px;
+    color: #fff;
+    transition: .5s;
+}
+.input-boxs input:focus~i,
+.input-boxs input:valid~i{
+    color: #0ef;
+}
+
+.containerz{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 10px;
+margin-left: 60px;
+}
+
+.containerz a{
+position: relative;
+width: 160px;
+height: 60px;
+display: inline-block;
+background-color: #fff;
+padding: 10px;
+
+}
+
+.containerz a::before,
+.containerz a::after{
+content: '';
+position: absolute;
+inset: 0;
+background: #f00;
+transition: 0.5s;
+}
+
+.containerz a:nth-child(1)::before,
+.containerz a:nth-child(1)::after{
+background: linear-gradient(45deg,#00ccff,#252839,#252839,#d400d4);
+}
+
+.containerz a:hover::before{
+inset: -3px;
+
+}
+
+.containerz a:hover::after{
+inset: -3px;
+filter: blur(10px);
+
+}
+
+.containerz a button{
+background: transparent;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: inline-block;
+z-index: 10;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1.2em;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: black;
+}
+
+.alert {
+display: flex;
+justify-content: center;
+text-align: center;
+margin-left: 75%;
+margin-top: 10px;
+}
+

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(122,63,251,1) 4%, rgba(28,16,31,1) 100%);
+}
+.header{
+    margin-bottom: 1000px;
+}
+nav
+{
+    position: sticky;
+    width: 100vh;
+    display: flex;
+    background: transparent;
+    padding: 10px 0;
+}
+
+nav a
+{
+    position: relative;
+    text-decoration: none;
+    padding: 15px 10px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+#marker
+{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 90px;
+    border-bottom: 5px solid #e00cbd;
+    background: linear-gradient(0deg,#c232af33,transparent);
+    transition: 0.5s;
+    pointer-events: none;
+    filter: drop-shadow(0 5px 25px #e00cbd);
+}
+.judul{
+    background: transparent;
+    border-radius: 20px;
+    margin-left: 10px;
+    display: flex;
+    margin-top: 100px;
+    
+    padding: 30px;
+    padding-right: 80px;
+    justify-content: center;
+    padding-top: 60px;
+    transition: all 1s;
+}
+.judul:hover{
+    
+    transform: translateX(-400px);
+    transition-delay: 1ms;
+    
+}
+.judul:hover a{
+    color: black;
+    transform: translateX(5px);
+}
+.judul .detail{
+    display: flex;
+    justify-content: center;
+}
+.detail h2{
+    margin-bottom: 50px;
+    margin-left: 50px;
+    color: #fff;
+}
+.detail h2 a{
+    color: #e00cbd;
+}
+label{
+    color: #fff;
+    font-weight: 600;
+}
+.containerz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.containerz a{
+    position: relative;
+    width: 160px;
+    height: 60px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px;
+
+}
+
+.containerz a::before,
+.containerz a::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #f00;
+    transition: 0.5s;
+}
+
+.containerz a:nth-child(1)::before,
+.containerz a:nth-child(1)::after{
+    background: linear-gradient(45deg,#00ccff,#252839,#252839,#d400d4);
+}
+
+.containerz a:hover::before{
+    inset: -3px;
+    
+}
+
+.containerz a:hover::after{
+    inset: -3px;
+    filter: blur(10px);
+    
+}
+
+.containerz a button{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}

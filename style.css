@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    min-height: 100vh;
+    background: #0c192c;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+body:has(.box[data-color="clr1"]:hover)
+{
+    background: #162527;
+}
+body:has(.box[data-color="clr2"]:hover)
+{
+    background: #202011;
+}
+body:has(.box[data-color="clr3"]:hover)
+{
+    background: #5b4510;
+}
+body:has(.box[data-color="clr4"]:hover)
+{
+    background: #611417;
+}
+.bg
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles
+{
+    position: relative;
+    display: flex;
+}
+.bubbles span
+{
+    position: relative;
+    min-width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    margin: 0 4px;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(75s/var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate
+{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 80px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+header .logo{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+header .logo span{
+    color: #ff2d75;
+}
+header nav{
+    display: flex;
+    gap: 25px;
+}
+header nav a{
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+header nav a.active,
+header nav a:hover
+{
+    color: #4fc3dc;
+}
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .content{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 800px;
+}
+section .content h2{
+    font-size: 3.5em;
+    color: #fff;
+}
+section .content h2 span{
+    color: #ff2d75;
+}
+section .content p{
+    color: #fff;
+    font-size: 1.1em;
+
+}
+section .content .buttons a{
+    display: inline-block;
+    padding: 11px 30px;
+    background: #4fc3dc;
+    color: #0c192c;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 6px;
+    letter-spacing: 0.1em;
+}
+section .content .buttons a:nth-child(1){
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* card css */
+.container
+{
+    margin-top: 27%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.container .box
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.container .box .imgBx
+{
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 4px solid rgba(0, 0, 0, 0.2);
+}
+.container .box .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.container .box:hover .imgBx img
+{
+    opacity: 0.5;
+}
+.container .box .glass
+{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#fff2,transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    scale: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.container .box .glass::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+}
+.container .box:hover
+{
+    transform: rotate(-15deg);
+}
+.container .box:hover .glass
+{
+    opacity: 1;
+    scale: 1;
+    transform: rotate(20deg);
+}
+.container .box .glass h3
+{
+    font-size: 1.25em;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 0.8em;
+}
+.container .box .glass h3 span
+{
+    font-weight: 400;
+    font-size: 0.5em;
+}
+.container .box ul
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.container .box ul a 
+{
+    color: #fff;
+    font-size: 1.25em;
+    scale: 0;
+    transition: 0.25s;
+    transition-delay: scale calc(0.2s * var(--a));
+}
+.container .box:hover ul a 
+{
+    scale: 1;
+}
+.container .box ul a:hover
+{
+    color: #ff2d75;
+}
+
